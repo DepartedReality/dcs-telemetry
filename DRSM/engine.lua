@@ -1,8 +1,8 @@
 -- DRSM Telemetry — Engine module
 -- Collects: engine RPM left/right (from LoGetEngineInfo),
 --           propeller RPM (from cockpit panel for warbirds).
--- NOTE: LoGetEngineInfo().RPM returns PERCENT (0-100) for most DCS aircraft.
---       Use engine_rpm_factor in aircraft_data.lua to convert to actual RPM.
+-- LoGetEngineInfo().RPM returns percent (0-100); engine_rpm_factor in
+-- aircraft_data.lua converts to actual RPM. Every aircraft MUST have a factor.
 
 local M = {}
 

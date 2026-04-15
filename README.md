@@ -125,14 +125,14 @@ is sent instead of `shake`. Consumers should prefer `panel_shake` when present.
 
 Source module: `DRSM/engine.lua`
 
-| Key         | Type   | Units   | Description                                        |
-|-------------|--------|---------|----------------------------------------------------|
-| `rpm_left`  | number | % or RPM | Left engine RPM (percent for most DCS aircraft)   |
-| `rpm_right` | number | % or RPM | Right engine RPM                                  |
-| `prop_rpm`  | number | RPM      | Propeller RPM (prop aircraft only, from cockpit gauge) |
+| Key         | Type   | Units | Description                                          |
+|-------------|--------|-------|------------------------------------------------------|
+| `rpm_left`  | number | RPM   | Left engine RPM                                      |
+| `rpm_right` | number | RPM   | Right engine RPM                                     |
+| `prop_rpm`  | number | RPM   | Propeller RPM (prop aircraft only, from cockpit gauge) |
 
-For aircraft with `engine_rpm_factor` in `aircraft_data.lua`, the value is a
-percentage (0–100). Multiply by the factor to get actual RPM.
+For aircraft with `engine_rpm_factor` in `aircraft_data.lua`, the raw percentage
+is multiplied by the factor to produce actual RPM.
 
 ---
 
